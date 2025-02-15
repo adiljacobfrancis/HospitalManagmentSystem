@@ -126,6 +126,13 @@ public class Panels {
 
     public static JPanel createAppointmentPanel() {
 
+        JPanel panel = new JPanel(new BorderLayout());
+        JPanel formPanel = new JPanel(new GridLayout(4, 2, 10, 10));
+        formPanel.setBorder(BorderFactory.createLineBorder(new Color(59, 25, 25), 10));
+
+        JLabel titleLabel = new JLabel("Appointment Details", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Serif", Font.BOLD, 18));
+        panel.add(titleLabel, BorderLayout.NORTH);
 
     }
 }
