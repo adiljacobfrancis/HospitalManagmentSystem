@@ -1,71 +1,17 @@
-package hospital.ui;
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-import javax.swing.*;
-import java.awt.*;
+    <groupId>org.example</groupId>
+    <artifactId>Hospital.ui</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-public class MenuPanel {
-    public static JPanel createMenuPanel(UIComponents app){
+    <properties>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-        JPanel menuPanel = new JPanel();
-        menuPanel.setBackground(new Color(59, 25, 25));
-        menuPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-
-        JMenuBar menuBar = new JMenuBar();
-        menuBar.setBackground(new Color(59, 25, 25));
-
-        JMenu menu = new JMenu("MENU");
-        menu.setForeground(Color.WHITE);
-        menu.setFont(new Font("Arial", Font.BOLD, 16));
-
-        JMenuItem homeItem = new JMenuItem("Home");
-        homeItem.setFont(new Font("Arial", Font.PLAIN, 16));
-        homeItem.setForeground(Color.WHITE);
-        homeItem.setBackground(new Color(59, 25, 25));
-        homeItem.setPreferredSize(new Dimension(180, 40));
-        homeItem.setMargin(new Insets(10, 20, 10, 20));
-        homeItem.addActionListener(e -> app.switchPanel("Home"));
-        menu.add(homeItem);
-
-        JMenuItem patientItem = new JMenuItem("Patient");
-        patientItem.setFont(new Font("Arial", Font.PLAIN, 16));
-        patientItem.setForeground(Color.WHITE);
-        patientItem.setBackground(new Color(59, 25, 25));
-        patientItem.setPreferredSize(new Dimension(180, 40));
-        patientItem.setMargin(new Insets(10, 20, 10, 20));
-        patientItem.addActionListener(e -> app.switchPanel("Patient"));
-        menu.add(patientItem);
-
-        JMenuItem doctorItem = new JMenuItem("Doctor");
-        doctorItem.setFont(new Font("Arial", Font.PLAIN, 16));
-        doctorItem.setForeground(Color.WHITE);
-        doctorItem.setBackground(new Color(59, 25, 25));
-        doctorItem.setPreferredSize(new Dimension(180, 40));
-        doctorItem.setMargin(new Insets(10, 20, 10, 20));
-        doctorItem.addActionListener(e -> app.switchPanel("Doctor"));
-        menu.add(doctorItem);
-
-        JMenuItem appointmentItem = new JMenuItem("Appointment");
-        appointmentItem.setFont(new Font("Arial", Font.PLAIN, 16));
-        appointmentItem.setForeground(Color.WHITE);
-        appointmentItem.setBackground(new Color(59, 25, 25));
-        appointmentItem.setPreferredSize(new Dimension(180, 40));
-        appointmentItem.setMargin(new Insets(10, 20, 10, 20));
-        appointmentItem.addActionListener(e -> app.switchPanel("Appointment"));
-        menu.add(appointmentItem);
-
-        JMenuItem viewItem = new JMenuItem("View");
-        viewItem.setFont(new Font("Arial", Font.PLAIN, 16));
-        viewItem.setForeground(Color.WHITE);
-        viewItem.setBackground(new Color(59, 25, 25));
-        viewItem.setPreferredSize(new Dimension(180, 40));
-        viewItem.setMargin(new Insets(10, 20, 10, 20));
-        viewItem.addActionListener(e -> app.switchPanel("View"));
-        menu.add(viewItem);
-
-        menuBar.add(menu);
-        menuPanel.add(menuBar);
-        return menuPanel;
-
-    }
-
-}
+</project>
