@@ -80,5 +80,19 @@ public class Panels {
         titleLabel.setFont(new Font("Serif", Font.BOLD, 18));
         panel.add(titleLabel, BorderLayout.NORTH);
 
+        JTextField nameField = new JTextField();
+        JTextField specializationField = new JTextField();
+        JTextField contactField = new JTextField();
+        JTextField experienceField = new JTextField();
+
+        formPanel.add(Utils.createLabel("Name:"));
+        formPanel.add(nameField);
+        formPanel.add(Utils.createLabel("Specialization:"));
+        formPanel.add(specializationField);
+        formPanel.add(Utils.createLabel("Experience (years):"));
+        formPanel.add(experienceField);
+        formPanel.add(Utils.createLabel("Contact:"));
+        formPanel.add(contactField);
+
     }
 }
