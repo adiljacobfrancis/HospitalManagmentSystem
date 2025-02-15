@@ -32,4 +32,8 @@ public class UIComponents {
         cardLayout.show(cardPanel, "Home");
         mainFrame.setVisible(true);
     }
+
+    public void switchPanel(String panelName) {
+        cardLayout.show(cardPanel, panelName);
+    }
 }
