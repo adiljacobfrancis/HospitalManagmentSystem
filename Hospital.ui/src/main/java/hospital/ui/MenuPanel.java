@@ -65,7 +65,7 @@ public class MenuPanel {
         menuBar.add(menu);
         menuPanel.add(menuBar);
         return menuPanel;
-    
+
     }
 
 }
