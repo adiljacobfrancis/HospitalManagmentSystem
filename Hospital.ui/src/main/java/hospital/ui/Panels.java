@@ -123,4 +123,9 @@ public class Panels {
         return panel;
 
     }
+
+    public static JPanel createAppointmentPanel() {
+
+
+    }
 }
