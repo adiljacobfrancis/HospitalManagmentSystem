@@ -9,6 +9,9 @@ public class UIComponents {
     private JFrame mainFrame;
 
     public UIComponents(){
-        
+        mainFrame = new JFrame("Hospital Management System");
+        mainFrame.setSize(600, 500);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLocationRelativeTo(null);
     }
 }
