@@ -14,7 +14,8 @@ class DataStorageTest {
 
     @Test
     void testAddAndGetDoctors() {
-
+        DataStorage.addDoctor("Dr. Smith", "Cardiology", "10", "555-5678");
+        assertTrue(DataStorage.getDoctors().get(0).contains("Dr. Smith"));
 
     }
 
