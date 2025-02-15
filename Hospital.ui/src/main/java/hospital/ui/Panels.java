@@ -20,7 +20,9 @@ public class Panels {
 
     public static JPanel createPatientPanel() {
 
+        JPanel panel = new JPanel(new BorderLayout());
+        JPanel formPanel = new JPanel(new GridLayout(5, 2, 10, 10));
+        formPanel.setBorder(BorderFactory.createLineBorder(new Color(59, 25, 25), 10));
 
-        
     }
 }
