@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Hospital.data" />
         <module name="Hospital.utils" />
+        <module name="Hospital.ui" />
         <module name="Hospital.app" />
       </profile>
     </annotationProcessing>
