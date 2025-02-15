@@ -22,7 +22,8 @@ class DataStorageTest {
     @Test
     void testAddAndGetAppointments() {
 
-
+        DataStorage.addAppointment("John Doe", "Dr. Smith", "2025-02-20", "10:00 AM");
+        assertTrue(DataStorage.getAppointments().get(0).contains("John Doe"));
 
     }
 }
