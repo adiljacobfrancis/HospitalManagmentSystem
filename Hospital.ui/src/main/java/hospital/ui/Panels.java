@@ -152,5 +152,28 @@ public class Panels {
         JButton saveButton = Utils.createButton("Save");
         JButton viewAppointmentsButton = Utils.createButton("View Appointments");
 
+        buttonPanel.add(saveButton);
+        buttonPanel.add(viewAppointmentsButton); // Add View Button next to Save Button
+
+        saveButton.addActionListener(e -> {
+            // Validate inputs
+            if (patientNameField.getText().isEmpty() || doctorNameField.getText().isEmpty() || dateField.getText().isEmpty() || timeField.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Please fill in all the fields.", "Validation Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                DataStorage.addAppointment(patientNameField.getText(), doctorNameField.getText(), dateField.getText(), timeField.getText());
+                JOptionPane.showMessageDialog(null, "Appointment scheduled successfully!");
+            }
+        });
+
+        // View Appointments Button ActionListener
+        viewAppointmentsButton.addActionListener(e -> {
+            StringBuilder data = new StringBuilder();
+            data.append("Appointments:\n").append(DataStorage.getAppointments()).append("\n");
+            JOptionPane.showMessageDialog(null, data.toString(), "Appointment Records", JOptionPane.INFORMATION_MESSAGE);
+        });
+
+        panel.add(formPanel, BorderLayout.CENTER);
+        panel.add(buttonPanel, BorderLayout.SOUTH);
+        return panel;
     }
 }
