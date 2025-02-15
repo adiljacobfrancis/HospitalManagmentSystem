@@ -134,5 +134,23 @@ public class Panels {
         titleLabel.setFont(new Font("Serif", Font.BOLD, 18));
         panel.add(titleLabel, BorderLayout.NORTH);
 
+        JTextField patientNameField = new JTextField();
+        JTextField doctorNameField = new JTextField();
+        JTextField dateField = new JTextField();
+        JTextField timeField = new JTextField();
+
+        formPanel.add(Utils.createLabel("Patient Name:"));
+        formPanel.add(patientNameField);
+        formPanel.add(Utils.createLabel("Doctor Name:"));
+        formPanel.add(doctorNameField);
+        formPanel.add(Utils.createLabel("Date (YYYY-MM-DD):"));
+        formPanel.add(dateField);
+        formPanel.add(Utils.createLabel("Time (HH:MM):"));
+        formPanel.add(timeField);
+
+        JPanel buttonPanel = new JPanel();
+        JButton saveButton = Utils.createButton("Save");
+        JButton viewAppointmentsButton = Utils.createButton("View Appointments");
+
     }
 }
