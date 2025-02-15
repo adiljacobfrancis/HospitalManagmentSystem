@@ -41,5 +41,32 @@ public class Panels {
         formPanel.add(addressField);
         formPanel.add(Utils.createLabel("Contact:"));
         formPanel.add(contactField);
+
+        JPanel buttonPanel = new JPanel();
+        JButton saveButton = Utils.createButton("Save");
+        JButton viewPatientsButton = Utils.createButton("View Patients");
+
+        buttonPanel.add(saveButton);
+        buttonPanel.add(viewPatientsButton);
+
+        saveButton.addActionListener(e -> {
+
+            if (nameField.getText().isEmpty() || ageField.getText().isEmpty() || addressField.getText().isEmpty() || contactField.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Please fill in all the fields.", "Validation Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                DataStorage.addPatient(nameField.getText(), ageField.getText(), addressField.getText(), contactField.getText());
+                JOptionPane.showMessageDialog(null, "Patient saved successfully!");
+            }
+        });
+
+
+        viewPatientsButton.addActionListener(e ->
+                JOptionPane.showMessageDialog(null, "Patients:\n" + DataStorage.getPatients(), "Patient Records", JOptionPane.INFORMATION_MESSAGE)
+        );
+
+
+        panel.add(formPanel, BorderLayout.CENTER);
+        panel.add(buttonPanel, BorderLayout.SOUTH);
+        return panel;
     }
 }
