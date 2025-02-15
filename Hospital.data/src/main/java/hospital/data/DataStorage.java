@@ -5,6 +5,10 @@ import java.util.List;
 
 public class DataStorage {
 
+    private static final List<String> patientData = new ArrayList<>();
+    private static final List<String> doctorData = new ArrayList<>();
+    private static final List<String> appointmentData = new ArrayList<>();
+
     // Patient Management
     public static void addPatient(String name, String age, String address, String contact) {
         patientData.add("Name: " + name + ", Age: " + age + ", Address: " + address + ", Contact: " + contact);
