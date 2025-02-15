@@ -94,5 +94,33 @@ public class Panels {
         formPanel.add(Utils.createLabel("Contact:"));
         formPanel.add(contactField);
 
+        JPanel buttonPanel = new JPanel();
+        JButton saveButton = Utils.createButton("Save");
+        JButton viewDoctorsButton = Utils.createButton("View Doctors");
+
+        buttonPanel.add(saveButton);
+        buttonPanel.add(viewDoctorsButton); // Add View Button next to Save Button
+
+        saveButton.addActionListener(e -> {
+            // Validate inputs
+            if (nameField.getText().isEmpty() || specializationField.getText().isEmpty() || experienceField.getText().isEmpty() || contactField.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Please fill in all the fields.", "Validation Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                DataStorage.addDoctor(nameField.getText(), specializationField.getText(), experienceField.getText(), contactField.getText());
+                JOptionPane.showMessageDialog(null, "Doctor saved successfully!");
+            }
+        });
+
+        // View Doctors Button ActionListener
+        viewDoctorsButton.addActionListener(e -> {
+            StringBuilder data = new StringBuilder();
+            data.append("Doctors:\n").append(DataStorage.getDoctors()).append("\n");
+            JOptionPane.showMessageDialog(null, data.toString(), "Doctor Records", JOptionPane.INFORMATION_MESSAGE);
+        });
+
+        panel.add(formPanel, BorderLayout.CENTER);
+        panel.add(buttonPanel, BorderLayout.SOUTH);
+        return panel;
+
     }
 }
