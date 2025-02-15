@@ -1,13 +1,11 @@
 package hospital.utils;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;
 import javax.swing.*;
 import java.awt.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class UtilsTest {
 
@@ -20,6 +18,12 @@ public class UtilsTest {
         assertEquals(Color.WHITE, button.getForeground());
         assertEquals(new Font("Arial", Font.BOLD, 14), button.getFont());
     }
-
+    @Test
+    public void testCreateLabel() {
+        JLabel label = Utils.createLabel("Test Label");
+        assertNotNull(label);
+        assertEquals("Test Label", label.getText());
+        assertNotNull(label.getBorder());
+    }
 
 }
