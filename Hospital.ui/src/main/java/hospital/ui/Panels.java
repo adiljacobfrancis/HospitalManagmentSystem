@@ -17,4 +17,10 @@ public class Panels {
         panel.add(label, BorderLayout.CENTER);
         return panel;
     }
+
+    public static JPanel createPatientPanel() {
+
+
+        
+    }
 }
