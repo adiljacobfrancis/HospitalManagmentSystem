@@ -1,17 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+package hospital.ui;
+import javax.swing.*;
+import java.awt.*;
 
-    <groupId>org.example</groupId>
-    <artifactId>Hospital.ui</artifactId>
-    <version>1.0-SNAPSHOT</version>
+public class UIComponents {
+    private JPanel cardPanel;
+    private CardLayout cardLayout;
+    private JFrame mainFrame;
 
-    <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    public UIComponents() {
+        mainFrame = new JFrame("Hospital Management System");
+        mainFrame.setSize(600, 500);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLocationRelativeTo(null);
 
-</project>
+        mainFrame.setLayout(new BorderLayout());
+
+        JPanel menuPanel = MenuPanel.createMenuPanel(this);
+        mainFrame.add(menuPanel, BorderLayout.NORTH);
+
+        cardLayout = new CardLayout();
+        cardPanel = new JPanel(cardLayout);
+
+        cardPanel.add(Panels.createHomePanel(), "Home");
+        cardPanel.add(Panels.createPatientPanel(), "Patient");
+        cardPanel.add(Panels.createDoctorPanel(), "Doctor");
+        cardPanel.add(Panels.createAppointmentPanel(), "Appointment");
+        cardPanel.add(Panels.createViewPanel(), "View");
+
+        mainFrame.add(cardPanel, BorderLayout.CENTER);
+        cardLayout.show(cardPanel, "Home");
+        mainFrame.setVisible(true);
+    }
+
+    public void switchPanel(String panelName) {
+        cardLayout.show(cardPanel, panelName);
+    }
+}
