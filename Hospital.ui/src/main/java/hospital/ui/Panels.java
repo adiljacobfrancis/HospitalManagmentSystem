@@ -185,5 +185,19 @@ public class Panels {
         JTextArea textArea = new JTextArea(20, 50);
         textArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textArea);
+
+        JButton refreshButton = Utils.createButton("Refresh");
+        refreshButton.addActionListener(e -> {
+            StringBuilder data = new StringBuilder();
+            data.append("Patients:\n").append(DataStorage.getPatients()).append("\n\n");
+            data.append("Doctors:\n").append(DataStorage.getDoctors()).append("\n\n");
+            data.append("Appointments:\n").append(DataStorage.getAppointments()).append("\n");
+
+            textArea.setText(data.toString());
+        });
+
+        panel.add(scrollPane, BorderLayout.CENTER);
+        panel.add(refreshButton, BorderLayout.SOUTH);
+        return panel;
     }
 }
