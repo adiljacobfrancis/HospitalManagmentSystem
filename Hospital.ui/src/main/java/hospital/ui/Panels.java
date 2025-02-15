@@ -179,6 +179,11 @@ public class Panels {
 
     public static JPanel createViewPanel(){
 
-        
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBorder(BorderFactory.createTitledBorder("View Records"));
+
+        JTextArea textArea = new JTextArea(20, 50);
+        textArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(textArea);
     }
 }
