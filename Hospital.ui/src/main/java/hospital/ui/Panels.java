@@ -176,4 +176,9 @@ public class Panels {
         panel.add(buttonPanel, BorderLayout.SOUTH);
         return panel;
     }
+
+    public static JPanel createViewPanel(){
+
+        
+    }
 }
