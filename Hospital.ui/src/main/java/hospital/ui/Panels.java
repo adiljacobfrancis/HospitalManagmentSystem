@@ -24,5 +24,22 @@ public class Panels {
         JPanel formPanel = new JPanel(new GridLayout(5, 2, 10, 10));
         formPanel.setBorder(BorderFactory.createLineBorder(new Color(59, 25, 25), 10));
 
+        JLabel titleLabel = new JLabel("Patient Details", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Serif", Font.BOLD, 18));
+        panel.add(titleLabel, BorderLayout.NORTH);
+
+        JTextField nameField = new JTextField();
+        JTextField ageField = new JTextField();
+        JTextField addressField = new JTextField();
+        JTextField contactField = new JTextField();
+
+        formPanel.add(Utils.createLabel("Name:"));
+        formPanel.add(nameField);
+        formPanel.add(Utils.createLabel("Age:"));
+        formPanel.add(ageField);
+        formPanel.add(Utils.createLabel("Address:"));
+        formPanel.add(addressField);
+        formPanel.add(Utils.createLabel("Contact:"));
+        formPanel.add(contactField);
     }
 }
