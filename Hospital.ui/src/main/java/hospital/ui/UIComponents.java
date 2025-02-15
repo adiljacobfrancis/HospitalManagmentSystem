@@ -7,4 +7,8 @@ public class UIComponents {
     private JPanel cardPanel;
     private CardLayout cardLayout;
     private JFrame mainFrame;
+
+    public UIComponents(){
+        
+    }
 }
