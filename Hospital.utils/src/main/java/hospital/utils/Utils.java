@@ -12,5 +12,11 @@ public class Utils {
         button.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
         return button;
     }
-    
+
+    public static JLabel createLabel(String text) {
+        JLabel label = new JLabel(text);
+        label.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
+        return label;
+    }
+
 }
