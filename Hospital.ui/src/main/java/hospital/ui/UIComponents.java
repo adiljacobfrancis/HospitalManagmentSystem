@@ -18,5 +18,18 @@ public class UIComponents {
 
         JPanel menuPanel = MenuPanel.createMenuPanel(this);
         mainFrame.add(menuPanel, BorderLayout.NORTH);
+
+        cardLayout = new CardLayout();
+        cardPanel = new JPanel(cardLayout);
+
+        cardPanel.add(Panels.createHomePanel(), "Home");
+        cardPanel.add(Panels.createPatientPanel(), "Patient");
+        cardPanel.add(Panels.createDoctorPanel(), "Doctor");
+        cardPanel.add(Panels.createAppointmentPanel(), "Appointment");
+        cardPanel.add(Panels.createViewPanel(), "View");
+
+        mainFrame.add(cardPanel, BorderLayout.CENTER);
+        cardLayout.show(cardPanel, "Home");
+        mainFrame.setVisible(true);
     }
 }
