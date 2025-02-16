@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f07b8b7-f06d-491c-9f01-8dca421b7988" name="Changes" comment="" />
+    <list default="true" id="6f07b8b7-f06d-491c-9f01-8dca421b7988" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +77,7 @@
       <recent name="hospital.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HospitalAppMainTest">
+  <component name="RunManager" selected="JUnit.UtilsTest.testCreateButton">
     <configuration name="HospitalAppMainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hospital.app" />
       <extension name="coverage">
@@ -124,9 +126,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UtilsTest.testCreateButton" />
         <item itemvalue="JUnit.HospitalAppMainTest" />
         <item itemvalue="JUnit.UtilsTest" />
-        <item itemvalue="JUnit.UtilsTest.testCreateButton" />
       </list>
     </recent_temporary>
   </component>
